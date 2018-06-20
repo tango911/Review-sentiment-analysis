@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<style>
+h1 {
+     text-align: center;
+     text-transform: uppercase;
+     color: white;
+     
+     font-size:48px;
+     }
+body {
+    background-color:#4CAF50;
+    
+
+}
+h2{
+     text-align: center;
+     text-transform: uppercase;
+     color: white;
+     
+     font-size:24px;
+
+}
+dl{
+   
+    width: 500px;
+    height:250px;
+    padding: 12px 20px;
+    
+    margin-left:470px;
+
+}
+input {
+    background-color: white; 
+    border: none;
+    color: green;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 40px 680px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+input:hover {
+    background-color: grey;
+    color: white;
+    border: 2px solid #555555;
+
+}
+
+</style>
+ <title>Movie Classification</title>
+ 
+</head>
+ <body>
+ 
+ <h1> REVIEW SENTIMENT ANALYSIS </h1>
+<h2>Please enter your review:</h2>
+{% from "_formhelpers.html" import render_field %}
+<form method=post action="/results">
+ <dl >
+ {{ render_field(form.moviereview, cols='60', rows='20') }}
+ </dl>
+ <div id='button'>
+ <input type=submit value='Submit review' name='submit_btn'>
+ </div>
+</form>
+ </body>
+</html>
