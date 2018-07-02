@@ -11,7 +11,7 @@ from vectorizer import vect
 app = Flask(__name__)
 
 # Preparing the Classifier
-cur_dir = os.path.dirname('G:\code\python\sentiment_analisis\movieclassifier\pkl_objects')
+cur_dir = os.path.dirname('__file__')
 clf = pickle.load(open(os.path.join(cur_dir,
                                'pkl_objects/classifier.pkl'), 'rb'))
 db = os.path.join(cur_dir, 'reviews.sqlite')
