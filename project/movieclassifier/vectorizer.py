@@ -11,7 +11,7 @@ import os
 import pickle
 
 
-cur_dir = os.path.dirname('G:\code\python\sentiment_analisis\movieclassifier\pkl_objects')
+cur_dir = os.path.dirname('__file__')
 stop = pickle.load(open(
                    os.path.join(cur_dir,
                   'pkl_objects',
